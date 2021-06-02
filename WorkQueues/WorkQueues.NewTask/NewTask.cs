@@ -21,7 +21,7 @@ namespace WorkQueues.NewTask
                     var properties = channel.CreateBasicProperties();
                     properties.Persistent = true;
 
-                    channel.BasicPublish(exchange: "", routingKey: "", basicProperties: properties, body: body);
+                    channel.BasicPublish(exchange: "", routingKey: "task_queue", basicProperties: properties, body: body);
                     Console.WriteLine("[x] sent {0}", message);
                 }
             }
