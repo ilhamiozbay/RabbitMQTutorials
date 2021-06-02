@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWorld", "HelloWorld", "{83718225-E70B-467D-84F3-4A12D62DD709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Send", "HelloWorld\HelloWorld.Send\HelloWorld.Send.csproj", "{71D6219D-FD9F-4C62-B461-691634014164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld.Send", "HelloWorld\HelloWorld.Send\HelloWorld.Send.csproj", "{71D6219D-FD9F-4C62-B461-691634014164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld.Receive", "HelloWorld\HelloWorld.Receive\HelloWorld.Receive.csproj", "{4B160B99-6214-4546-8120-D6C8F63AF9F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld.Receive", "HelloWorld\HelloWorld.Receive\HelloWorld.Receive.csproj", "{4B160B99-6214-4546-8120-D6C8F63AF9F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkQueues", "WorkQueues", "{53318655-98D8-42A8-9D82-6981A44777ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueues.NewTask", "WorkQueues\WorkQueues.NewTask\WorkQueues.NewTask.csproj", "{A558E370-03C9-4040-8B97-233D19B111E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkQueues.Worker", "WorkQueues\WorkQueues.Worker\WorkQueues.Worker.csproj", "{FA731DA7-EC57-4C5B-AB97-86A06C6A2474}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,14 @@ Global
 		{4B160B99-6214-4546-8120-D6C8F63AF9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B160B99-6214-4546-8120-D6C8F63AF9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B160B99-6214-4546-8120-D6C8F63AF9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A558E370-03C9-4040-8B97-233D19B111E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A558E370-03C9-4040-8B97-233D19B111E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A558E370-03C9-4040-8B97-233D19B111E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A558E370-03C9-4040-8B97-233D19B111E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA731DA7-EC57-4C5B-AB97-86A06C6A2474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA731DA7-EC57-4C5B-AB97-86A06C6A2474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA731DA7-EC57-4C5B-AB97-86A06C6A2474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA731DA7-EC57-4C5B-AB97-86A06C6A2474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{71D6219D-FD9F-4C62-B461-691634014164} = {83718225-E70B-467D-84F3-4A12D62DD709}
 		{4B160B99-6214-4546-8120-D6C8F63AF9F3} = {83718225-E70B-467D-84F3-4A12D62DD709}
+		{A558E370-03C9-4040-8B97-233D19B111E9} = {53318655-98D8-42A8-9D82-6981A44777ED}
+		{FA731DA7-EC57-4C5B-AB97-86A06C6A2474} = {53318655-98D8-42A8-9D82-6981A44777ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29CF4460-DCF1-4CD2-9E67-0454B209156B}
