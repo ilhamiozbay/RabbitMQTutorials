@@ -3,9 +3,9 @@ using RabbitMQ.Client.Events;
 using System;
 using System.Text;
 
-namespace Routing.ReceiveLogsDirect
+namespace Topics.ReceiveLogsTopic
 {
-    class ReceiveLogsDirect
+    class ReceiveLogsTopic
     {
         static void Main(string[] args)
         {
@@ -14,24 +14,24 @@ namespace Routing.ReceiveLogsDirect
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.ExchangeDeclare(exchange: "direct_logs", type: ExchangeType.Direct);
+                    channel.ExchangeDeclare(exchange: "topic_logs", type: ExchangeType.Topic);
                     var queueName = channel.QueueDeclare().QueueName;
 
                     if (args.Length < 1)
                     {
-                        Console.Error.WriteLine("Usage: {0} [info] [warning] [error]", Environment.GetCommandLineArgs()[0]);
+                        Console.Error.WriteLine("Usage: {0} [binding_key...]", Environment.GetCommandLineArgs()[0]);
                         Console.WriteLine(" Press [enter] to exit.");
                         Console.ReadLine();
                         Environment.ExitCode = 1;
                         return;
                     }
 
-                    foreach (var severity in args)
+                    foreach (var bindingKey in args)
                     {
-                        channel.QueueBind(queue: queueName, exchange: "direct_logs", routingKey: severity);
+                        channel.QueueBind(queue: queueName, exchange: "topic_logs", routingKey: bindingKey);
                     }
 
-                    Console.WriteLine(" [*] Waiting for messages.");
+                    Console.WriteLine(" [*] Waiting for messages. To exit press CTRL+C");
 
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) =>
