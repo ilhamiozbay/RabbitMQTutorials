@@ -23,15 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe.ReceiveLog
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{9B911174-907A-4BC7-9A3A-3E08227D83D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.EmitLogDirect", "Routing\Routing.EmitLogDirect\Routing.EmitLogDirect.csproj", "{439887E6-8F7E-489F-8C69-FE96CB634D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routing.EmitLogDirect", "Routing\Routing.EmitLogDirect\Routing.EmitLogDirect.csproj", "{439887E6-8F7E-489F-8C69-FE96CB634D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing.ReceiveLogsDirect", "Routing\Routing.ReceiveLogsDirect\Routing.ReceiveLogsDirect.csproj", "{49DC1D43-F289-4DEE-924B-FFAF0FFE6FBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routing.ReceiveLogsDirect", "Routing\Routing.ReceiveLogsDirect\Routing.ReceiveLogsDirect.csproj", "{49DC1D43-F289-4DEE-924B-FFAF0FFE6FBB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Topics", "Topics", "{0553A29D-A941-4C98-8BD2-9B0D5CD834E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topics.EmitLogTopic", "Topics\Topics.EmitLogTopic\Topics.EmitLogTopic.csproj", "{0E736C9D-DDF0-4AB0-9B67-CD29C97DC756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Topics.EmitLogTopic", "Topics\Topics.EmitLogTopic\Topics.EmitLogTopic.csproj", "{0E736C9D-DDF0-4AB0-9B67-CD29C97DC756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topics.ReceiveLogsTopic", "Topics\Topics.ReceiveLogsTopic\Topics.ReceiveLogsTopic.csproj", "{5726F9A0-07FA-4073-B70E-EEE616620AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Topics.ReceiveLogsTopic", "Topics\Topics.ReceiveLogsTopic\Topics.ReceiveLogsTopic.csproj", "{5726F9A0-07FA-4073-B70E-EEE616620AAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RPC", "RPC", "{E7E0488E-3357-40AE-9569-273F75F27411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPC.RPCServer", "RPC\RPC.RPCServer\RPC.RPCServer.csproj", "{654DE009-91F2-413E-A372-61668BC300EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPC.RPCClient", "RPC\RPC.RPCClient\RPC.RPCClient.csproj", "{A0DC43AE-B2A9-4039-92AA-B637D523587D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +85,14 @@ Global
 		{5726F9A0-07FA-4073-B70E-EEE616620AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5726F9A0-07FA-4073-B70E-EEE616620AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5726F9A0-07FA-4073-B70E-EEE616620AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654DE009-91F2-413E-A372-61668BC300EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654DE009-91F2-413E-A372-61668BC300EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654DE009-91F2-413E-A372-61668BC300EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654DE009-91F2-413E-A372-61668BC300EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DC43AE-B2A9-4039-92AA-B637D523587D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DC43AE-B2A9-4039-92AA-B637D523587D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DC43AE-B2A9-4039-92AA-B637D523587D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DC43AE-B2A9-4039-92AA-B637D523587D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +108,8 @@ Global
 		{49DC1D43-F289-4DEE-924B-FFAF0FFE6FBB} = {9B911174-907A-4BC7-9A3A-3E08227D83D0}
 		{0E736C9D-DDF0-4AB0-9B67-CD29C97DC756} = {0553A29D-A941-4C98-8BD2-9B0D5CD834E1}
 		{5726F9A0-07FA-4073-B70E-EEE616620AAD} = {0553A29D-A941-4C98-8BD2-9B0D5CD834E1}
+		{654DE009-91F2-413E-A372-61668BC300EE} = {E7E0488E-3357-40AE-9569-273F75F27411}
+		{A0DC43AE-B2A9-4039-92AA-B637D523587D} = {E7E0488E-3357-40AE-9569-273F75F27411}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29CF4460-DCF1-4CD2-9E67-0454B209156B}
